@@ -5,7 +5,7 @@
 
 <generatorConfiguration>
     <properties resource="config.properties" />
-    <classPathEntry location="mysql-connector-java-8.0.12.jar" />
+    <classPathEntry location="mysql-connector-java-5.1.26.jar" />
 
     <context id="DB" targetRuntime="MyBatis3">
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
