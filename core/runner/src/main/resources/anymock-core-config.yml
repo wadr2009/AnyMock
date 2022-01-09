@@ -4,7 +4,7 @@ spring:
       charset: UTF-8
       force: true
   datasource:
-    url: jdbc:mysql://localhost:3306/anymock_opensource?serverTimezone=UTC
+    url: jdbc:mysql://121.43.113.188:3306/anymock_opensource?serverTimezone=UTC&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     username: root
     password: 123456
     type: com.zaxxer.hikari.HikariDataSource
