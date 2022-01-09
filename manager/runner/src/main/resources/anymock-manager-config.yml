@@ -6,13 +6,13 @@ spring:
       charset: UTF-8
       force: true
   datasource:
-    url: jdbc:mysql://172.18.223.129:3306/anymock_opensource?serverTimezone=UTC
+    url: jdbc:mysql://121.43.113.188:3306/anymock_opensource?serverTimezone=UTC
     username: root
     password: 123456
     type: com.zaxxer.hikari.HikariDataSource
 
   redis:
-    host: 172.18.223.129
+    host: 121.43.113.188
     port: 6379
 
 logging:
