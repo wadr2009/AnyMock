@@ -42,4 +42,4 @@ anymock:
 
 fe:
   pathwin: D:\javacode\AnyMock\anymock-fe\dist\
-  pathlin: /anymock-fe/dist/
+  pathlin: /root/AnyMock/anymock-fe/dist/
