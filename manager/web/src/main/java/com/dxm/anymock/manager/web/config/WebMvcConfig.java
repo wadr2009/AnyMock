@@ -15,8 +15,11 @@ import static com.dxm.anymock.manager.web.WebConstants.URL_PREFIX_API_V2_PATTERN
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
 
-    @Value("${fe.path}")
-    private String fePath;
+    @Value("${fe.pathwin}")
+    private String fePathwin;
+
+    @Value("${fe.pathlin}")
+    private String fePathlin;
 
     @Value("${anymock.manager.admin.password}")
     private String password;
@@ -29,7 +32,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/fe/**").addResourceLocations(fePath);
+        String os = System.getProperty("os.name");
+        if (os.toLowerCase().startsWith("win")){
+            registry.addResourceHandler("/fe/**").addResourceLocations("file:" + fePathwin);
+        }else{
+            registry.addResourceHandler("/fe/**").addResourceLocations("file:" + fePathlin);
+        }
     }
 
     @Bean
